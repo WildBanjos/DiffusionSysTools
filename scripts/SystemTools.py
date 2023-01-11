@@ -41,7 +41,7 @@ class Script(scripts.Script):
         with gr.Accordion(label="System Tools", open=False):
             with gr.Row():
                 with gr.Column():
-                    gr.Markdown(f"Total Physical Ram: {round(psutil.virtual_memory().total/(1024*1024*1024),2)}GB")
+                    gr.Markdown(f"Max Physical Ram: {round(psutil.virtual_memory().total/(1024*1024*1024),2)}GB")
                     #gr.Markdown("Put specs here")
                 with gr.Column():
                     GCbutton = gr.Button(value="Call RAM GC")
