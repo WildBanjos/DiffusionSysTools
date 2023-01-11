@@ -41,11 +41,11 @@ class Script(scripts.Script):
         with gr.Accordion(label="System Tools", open=False):
             with gr.Row():
                 with gr.Column():
-                    gr.Markdown(f"Total Physical Ram: {psutil.virtual_memory().total}")
-                    gr.Markdown("Put specs here")
+                    gr.Markdown(f"Total Physical Ram: {round(psutil.virtual_memory().total/(1024*1024*1024),2)}GB")
+                    #gr.Markdown("Put specs here")
                 with gr.Column():
                     GCbutton = gr.Button(value="Call RAM GC")
                     GCbutton.click(runGC)
                     Torchbutton = gr.Button(value="Call Torch GC")
                     Torchbutton.click(runTorchGC)
-                    ReloadModel = gr.Button(value="Reload Model")
+                    #ReloadModel = gr.Button(value="Reload Model")
